@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 
-function Input({ label ,value,  onShow}) {
+function Input({ label , value , onChange }) {
 
 	return (
 		<label>
@@ -9,19 +9,22 @@ function Input({ label ,value,  onShow}) {
 			{' '}
 			<input
 				value={value}
-				onChange={onShow}
+				onChange={onChange}
 			/>
 		</label>
 	);
 }
-
 export default function SyncedInputs() {
-	const [text, setText] = useState('');
+	const [text, setText] = useState('');	
+
+	function handleChange(e) {
+		setText(e.target.value);
+	}
 
 	return (
 		<>
-			<Input label="First input" onShow={e => setText(e.target.value)} value={text}/>
-			<Input label="Second input" onShow={e => setText(e.target.value)} value={text}/>
+			<Input label="First input"  value={text} onChange={handleChange}/>
+			<Input label="Second input" value={text} onChange={handleChange}/>
 		</>
 	);
 }

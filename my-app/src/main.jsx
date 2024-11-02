@@ -1,6 +1,6 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import './index.css';
+// import './index.css';
 import './App.css';
 // import Dev from './App';
 // import Gallery from './adding-interactivity/gallery-image-update'
@@ -13,11 +13,11 @@ import './App.css';
 // import EditProfile from './managing-state/challenges/profile-editor'
 // import FeedbackForm from './managing-state/choosing-state-structure'
 // import Menu from './managing-state/choosing-state-structure/avoid-duplication-in-state'
-import SyncedInputs from './managing-state/challenges/synced-inputs'
+import App from './managing-state/preserving-resetting-state/practice/exFour'
 
 const root = createRoot(document.getElementById('root'))
 root.render(
   <StrictMode>
-    <SyncedInputs/>
+    <App/>
   </StrictMode>
 );
