@@ -9,8 +9,8 @@ import './App.css';
 // import ShoppingCart from './updating-array-state/challenges/remove-item-cart'
 // import List from './updating-array-state/updating-objects-inside-array'
 // import Form from './managing-state/reacting-to-input-with-state'
-// import Picture from './managing-state/challenges/add-remove-css-class'
-// import EditProfile from './managing-state/challenges/profile-editor'
+import SyncedInputs from './managing-state/challenges/synced-inputs'
+import EditProfile from './managing-state/challenges/profile-editor'
 // import FeedbackForm from './managing-state/choosing-state-structure'
 // import Menu from './managing-state/choosing-state-structure/avoid-duplication-in-state'
 import App from './managing-state/preserving-resetting-state/practice/exFour'
@@ -18,6 +18,6 @@ import App from './managing-state/preserving-resetting-state/practice/exFour'
 const root = createRoot(document.getElementById('root'))
 root.render(
   <StrictMode>
-    <App/>
+    <SyncedInputs/>
   </StrictMode>
 );

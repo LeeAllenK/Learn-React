@@ -6,18 +6,15 @@ Make sure that it updates the text at the bottom, too!
 
 
 App.js*/
-
 import {useState} from 'react';
 
 
 export default function EditProfile() {
-
-	const [fName , setFName] = useState('');
-	const [lName , setLName] = useState('');
+	const [fName , setFName] = useState('Kenny');
+	const [lName , setLName] = useState('Allen');
 	const [isEditing , setIsEditing] = useState(false);
-	
-	let fullName = fName + ' ' + lName;
 
+	const fullName = fName + ' ' + lName;
 
 	return (
 		<form
@@ -29,13 +26,13 @@ export default function EditProfile() {
 			<label>
 				First name:{' '}
 				{isEditing ? (
-				<input 
+				<input
 				type='text'
 				value={fName}
-				onChange={e => setFName(e.target.value)}	
-				/>
+				onChange={e => setFName(e.target.value)}
+				
+				 />
 				) : (
-
 				<b>{fName}</b>
 				)}
 			</label>
@@ -44,16 +41,15 @@ export default function EditProfile() {
 				{isEditing ? (
 				<input
 				type='text'
-				value={lName}	
+				value={lName}
 				onChange={e => setLName(e.target.value)}
 				/>
 				) : (
-
 				<b>{lName}</b>
 				)}
 			</label>
 			<button type="submit">
-				Edit Profile
+				{isEditing ? 'Save Profile' : 'Edit Profile'}
 			</button>
 			<p><i>Hello, {fullName}!</i></p>
 		</form>

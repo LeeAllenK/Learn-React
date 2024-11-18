@@ -1,21 +1,23 @@
 import { useState } from 'react';
 
 
-function Input({ label , value , onChange }) {
+function Input({ label  , text , onChange}) {
+
 
 	return (
 		<label>
 			{label}
 			{' '}
 			<input
-				value={value}
+				value={text}
 				onChange={onChange}
 			/>
 		</label>
 	);
 }
+
 export default function SyncedInputs() {
-	const [text, setText] = useState('');	
+	const [text, setText] = useState('');
 
 	function handleChange(e) {
 		setText(e.target.value);
@@ -23,8 +25,8 @@ export default function SyncedInputs() {
 
 	return (
 		<>
-			<Input label="First input"  value={text} onChange={handleChange}/>
-			<Input label="Second input" value={text} onChange={handleChange}/>
+			<Input label="First input" text={text} onChange={handleChange}/>
+			<Input label="Second input" text={text} onChange={handleChange} />
 		</>
 	);
 }
