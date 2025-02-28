@@ -14,10 +14,13 @@ import EditProfile from './managing-state/challenges/profile-editor'
 // import FeedbackForm from './managing-state/choosing-state-structure'
 // import Menu from './managing-state/choosing-state-structure/avoid-duplication-in-state'
 import App from './managing-state/preserving-resetting-state/practice/exFour'
-
+// import Chat from './escape-hatches/challenges/fix-broken-chat-input'
+import Toggle from './escape-hatches/challenges/fix-component-failing-to-rerender'
+import Dashboard from './escape-hatches/challenges/fix-debouncing'
+import Chat from './escape-hatches/challenges/read-the-latest-state'
 const root = createRoot(document.getElementById('root'))
 root.render(
   <StrictMode>
-    <SyncedInputs/>
+    <Chat/>
   </StrictMode>
 );
