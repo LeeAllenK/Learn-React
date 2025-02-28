@@ -18,9 +18,10 @@ import App from './managing-state/preserving-resetting-state/practice/exFour'
 import Toggle from './escape-hatches/challenges/fix-component-failing-to-rerender'
 import Dashboard from './escape-hatches/challenges/fix-debouncing'
 import Chat from './escape-hatches/challenges/read-the-latest-state'
+import Counter from './custom-hooks/challenges/extract-a-useCounter-Hook'
 const root = createRoot(document.getElementById('root'))
 root.render(
   <StrictMode>
-    <Chat/>
+    <Counter/>
   </StrictMode>
 );
